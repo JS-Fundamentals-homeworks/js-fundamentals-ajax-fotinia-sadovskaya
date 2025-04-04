@@ -29,14 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const user = users.find(u => u.name.toLowerCase() === userName.toLowerCase());
 
             if (user) {
-                userCitySpan.textContent = `🏙️ Місто: ${user.address.city}`;
+                userCitySpan.textContent = `🏙️ City: ${user.address.city}`;
             } else {
-                userCitySpan.textContent = "❌ Користувача не знайдено!";
+                userCitySpan.textContent = "❌ User not found!";
             }
 
         } catch (error) {
-            console.error("❌ Помилка при отриманні даних:", error);
-            userCitySpan.textContent = "❌ Сталася помилка при запиті!";
+            console.error("❌ Error retrieving data!:", error);
+            userCitySpan.textContent = "❌ An error occurred during the request!";
         }
     });
 });
